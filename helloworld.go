@@ -1,12 +1,16 @@
 package main
 
 import (
+	"fmt"
+	"io"
 	"net/http"
 )
 
 func main() {
 	http.HandleFunc("/", func(writer http.ResponseWriter, request *http.Request) {
-		writer.Write([]byte("helloworld"))
+		_, _ = writer.Write([]byte("hello world"))
+		_, _ = fmt.Fprintf(writer, "hello,world")
+		_, _ = io.WriteString(writer, "hello world")
 	})
-	http.ListenAndServe(":8000", nil)
+	_ = http.ListenAndServe(":8000", nil)
 }
