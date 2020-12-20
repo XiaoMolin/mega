@@ -1,24 +1,25 @@
 package main
 
 import (
+	"fmt"
 	"html/template"
+	"log"
 	"mega/TemplateBasic/model"
 	"net/http"
+	"os"
+	"path/filepath"
 )
 
 func main() {
-	http.HandleFunc("/", func(w http.ResponseWriter, request *http.Request) {
-		user := model.User{Username: "林小墨"}
-		tpl, _ := template.New("").Parse(`<html>
-            <head>
-                <title>Home Page - Bonfy</title>
-            </head>
-            <body>
-                <h1>Hello, {{.Username}}!</h1>
-            </body>
-        </html>
-    `)
-		tpl.Execute(w, &user)
+	cwd, _ := os.Getwd()
+	fmt.Println(filepath.Join(cwd, "mega/TemplateBasic/templates/index.html"))
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		user := model.User{Username: "lxm"}
+		tpl, _ := template.ParseFiles("src/mega/TemplateBasic/templates/index.html")
+		err := tpl.Execute(w, &user)
+		if err != nil {
+			log.Fatal(err)
+		}
 	})
-	http.ListenAndServe(":8000", nil)
+	http.ListenAndServe(":8888", nil)
 }
