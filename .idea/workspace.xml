@@ -1,7 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="2abbfe7f-d358-43c2-8fbd-80cc36317a1c" name="Default Changelist" comment="" />
+    <list default="true" id="2abbfe7f-d358-43c2-8fbd-80cc36317a1c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/cmd/db_init/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/g.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/g.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/home.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/middleware.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/utils.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/g.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/post.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/user.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/utils.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/_base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/content/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/content/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/content/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vm/g.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vm/index.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vm/login.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vm/register.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,6 +52,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Go Application" />
+        <option value="HTML File" />
+        <option value="Go File" />
       </list>
     </option>
   </component>
@@ -19,18 +62,53 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1m0lkYNlg8Sjs9JmhXVD1tSZz01" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DefaultGoTemplateProperty" value="Go Application" />
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="go.vgo" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\a1320\Desktop\mega" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Build.go build mega">
+    <configuration name="go build mega" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="mega" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <package value="mega" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build mega/cmd/db_init" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="mega" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/cmd/db_init/main.go" />
+      <package value="mega/cmd/db_init" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build mega" />
+        <item itemvalue="Go Build.go build mega/cmd/db_init" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -46,6 +124,17 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
     <environment>
@@ -59,6 +148,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="749" y="322" width="622" height="281" key="EnvironmentVariablesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608638565689" />
+    <state width="947" height="281" key="GridCell.Tab.0.bottom" timestamp="1608641653297">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="947" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608641653297" />
+    <state width="947" height="281" key="GridCell.Tab.0.center" timestamp="1608641653297">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="947" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608641653297" />
+    <state width="947" height="281" key="GridCell.Tab.0.left" timestamp="1608641653297">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="947" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608641653297" />
+    <state width="947" height="281" key="GridCell.Tab.0.right" timestamp="1608641653297">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="947" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608641653297" />
     <state x="363" y="107" key="SettingsEditor" timestamp="1608638566478">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
