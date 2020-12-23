@@ -101,7 +101,7 @@ func (u *User)FollowSelf()error{
 // FollowingIDs func
 func(u *User)FollowingIDs()[]int{
 	var ids []int
-	rows,err:=db.Table("followers").Where("follower_id=?",u.ID).Select("user_id,follower_id").Rows()
+	rows,err:=db.Table("follower").Where("follower_id=?",u.ID).Select("user_id,follower_id").Rows()
 	if err != nil {
 		log.Println("Conuting Following error:",err)
 	}
@@ -120,7 +120,10 @@ func (u *User)FollowingCount()int{
 	return len(ids)
 }
 
-
+// FollowersCount func
+func (u *User) FollowersCount() int {
+	return db.Model(u).Association("Followers").Count()
+}
 // FollowingPosts func
 func (u *User)FollowingPosts()(*[]Post,error){
 	var posts []Post
