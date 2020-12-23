@@ -20,20 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2abbfe7f-d358-43c2-8fbd-80cc36317a1c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/model/profile.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/content/profile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/content/profile_edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vm/profile.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vm/profile_edit.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/db_init/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/db_init/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/home.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/home.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/middleware.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/middleware.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/utils.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/utils.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/_base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +65,7 @@
       <recent name="C:\Users\a1320\Desktop\mega" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build mega">
+  <component name="RunManager" selected="Go Build.go build mega/cmd/db_init">
     <configuration name="go build mega" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="mega" />
       <working_directory value="$PROJECT_DIR$" />
@@ -97,8 +86,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build mega" />
         <item itemvalue="Go Build.go build mega/cmd/db_init" />
+        <item itemvalue="Go Build.go build mega" />
       </list>
     </recent_temporary>
   </component>
@@ -140,22 +129,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="749" y="322" width="622" height="281" key="EnvironmentVariablesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608638565689" />
-    <state width="947" height="281" key="GridCell.Tab.0.bottom" timestamp="1608642523573">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1608689804733">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="947" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608642523573" />
-    <state width="947" height="281" key="GridCell.Tab.0.center" timestamp="1608642523573">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608689804733" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1608689804733">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="947" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608642523573" />
-    <state width="947" height="281" key="GridCell.Tab.0.left" timestamp="1608642523573">
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608689804733" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1608689804731">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="947" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608642523573" />
-    <state width="947" height="281" key="GridCell.Tab.0.right" timestamp="1608642523573">
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608689804731" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1608689804733">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="947" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608642523573" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608689804733" />
     <state x="363" y="107" key="SettingsEditor" timestamp="1608638566478">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

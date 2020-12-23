@@ -68,10 +68,10 @@ func loginHandler(w http.ResponseWriter, r *http.Request) {
 	v := vop.GetVM()
 
 	if r.Method == http.MethodGet {
-		templates[tpName].Execute(w, &v)
+		_ = templates[tpName].Execute(w, &v)
 	}
 	if r.Method == http.MethodPost {
-		r.ParseForm()
+		_ = r.ParseForm()
 		username := r.Form.Get("username")
 		password := r.Form.Get("password")
 
@@ -89,9 +89,9 @@ func loginHandler(w http.ResponseWriter, r *http.Request) {
 
 
 		if len(v.Errs) > 0 {
-			templates[tpName].Execute(w, &v)
+			_ = templates[tpName].Execute(w, &v)
 		} else {
-			setSessionUser(w, r, username)
+			_ = setSessionUser(w, r, username)
 			http.Redirect(w, r, "/", http.StatusSeeOther)
 		}
 	}
@@ -102,10 +102,10 @@ func registerHandler(w http.ResponseWriter, r *http.Request) {
 	v := vop.GetVM()
 
 	if r.Method == http.MethodGet {
-		templates[tpName].Execute(w, &v)
+		_ = templates[tpName].Execute(w, &v)
 	}
 	if r.Method == http.MethodPost {
-		r.ParseForm()
+		_ = r.ParseForm()
 		username := r.Form.Get("username")
 		email := r.Form.Get("email")
 		pwd1 := r.Form.Get("pwd1")
@@ -115,20 +115,20 @@ func registerHandler(w http.ResponseWriter, r *http.Request) {
 		v.AddError(errs...)
 
 		if len(v.Errs) > 0 {
-			templates[tpName].Execute(w, &v)
+			_ = templates[tpName].Execute(w, &v)
 		} else {
 			if err := addUser(username, pwd1, email); err != nil {
 				log.Println("add User error:", err)
 				w.Write([]byte("Error insert database"))
 				return
 			}
-			setSessionUser(w, r, username)
+			_ = setSessionUser(w, r, username)
 			http.Redirect(w, r, "/", http.StatusSeeOther)
 		}
 	}
 }
 func logoutHandler(w http.ResponseWriter, r *http.Request) {
-	clearSession(w, r)
+	_ = clearSession(w, r)
 	http.Redirect(w, r, "/login", http.StatusTemporaryRedirect)
 }
 
