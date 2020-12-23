@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"os"
 	"regexp"
+	"strconv"
 )
 
 // PopulateTemplates func
@@ -191,4 +192,19 @@ func getFlash(w http.ResponseWriter, r *http.Request) string {
 	}
 	session.Save(r, w)
 	return fmt.Sprintf("%v", fm[0])
+}
+
+
+func getPage(r *http.Request)int{
+	url :=r.URL
+	query :=url.Query()
+	q:=query.Get("page")
+	if q==""{
+		return 1
+	}
+	page,err:=strconv.Atoi(q)
+	if err != nil {
+		return 1
+	}
+	return page
 }

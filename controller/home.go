@@ -19,10 +19,21 @@ func (h home) registerRoutes() {
 	r.HandleFunc("/follow/{username}", middleAuth(followHandler))
 	r.HandleFunc("/unfollow/{username}", middleAuth(unFollowHandler))
 	r.HandleFunc("/user/{username}", middleAuth(profileHandler))
+	r.HandleFunc("/explore", middleAuth(exploreHandler))
 	r.HandleFunc("/", middleAuth(indexHandler))
 
 	http.Handle("/", r)
 }
+
+func exploreHandler(w http.ResponseWriter, r *http.Request) {
+	tpName := "explore.html"
+	vop := vm.ExploreViewModelOp{}
+	username, _ := getSessionUser(r)
+	page := getPage(r)
+	v := vop.GetVM(username, page, pageLimit)
+	templates[tpName].Execute(w, &v)
+}
+
 func profileEditHandler(w http.ResponseWriter, r *http.Request) {
 	tpName := "profile_edit.html"
 	username, _ := getSessionUser(r)
@@ -37,11 +48,11 @@ func profileEditHandler(w http.ResponseWriter, r *http.Request) {
 
 	if r.Method == http.MethodPost {
 		r.ParseForm()
-		aboutme := r.Form.Get("aboutme")
+		aboutme := r.Form.Get("about me")
 		log.Println(aboutme)
 		if err := vm.UpdateAboutMe(username, aboutme); err != nil {
-			log.Println("update Aboutme error:", err)
-			w.Write([]byte("Error update aboutme"))
+			log.Println("update About me error:", err)
+			w.Write([]byte("Error update about me"))
 			return
 		}
 		http.Redirect(w, r, fmt.Sprintf("/user/%s", username), http.StatusSeeOther)
@@ -51,10 +62,11 @@ func profileEditHandler(w http.ResponseWriter, r *http.Request) {
 func indexHandler(w http.ResponseWriter, r *http.Request) {
 	tpName := "index.html"
 	vop := vm.IndexViewModelOp{}
+	page :=getPage(r)
 	username, _ := getSessionUser(r)
 	if r.Method == http.MethodGet{
 		flash := getFlash(w,r)
-		v :=vop.GetVM(username,flash)
+		v :=vop.GetVM(username,flash,page,pageLimit)
 		templates[tpName].Execute(w,&v)
 	}
 	if r.Method==http.MethodPost{
@@ -156,10 +168,11 @@ func logoutHandler(w http.ResponseWriter, r *http.Request) {
 func profileHandler(w http.ResponseWriter, r *http.Request) {
 	tpName := "profile.html"
 	vars := mux.Vars(r)
+	page:=getPage(r)
 	pUser := vars["username"]
 	sUser, _ := getSessionUser(r)
 	vop := vm.ProfileViewModelOp{}
-	v, err := vop.GetVM(sUser, pUser)
+	v, err := vop.GetVM(sUser, pUser,page,pageLimit)
 	if err != nil {
 		msg := fmt.Sprintf("user ( %s ) does not exist", pUser)
 		w.Write([]byte(msg))
